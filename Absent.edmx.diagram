@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="926770b44edf4b89af5b6fda7c38aec8" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="AbsentModel.admin" Width="1.5" PointX="4.625" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbsentModel.course_schedu" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbsentModel.excute" Width="1.5" PointX="5.875" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbsentModel.ins_cr" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbsentModel.instructor" Width="1.5" PointX="2.875" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbsentModel.section" Width="1.5" PointX="1.375" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbsentModel.st_cr" Width="1.5" PointX="10.375" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbsentModel.student" Width="1.5" PointX="8.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AbsentModel.user" Width="1.5" PointX="1.5" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="AbsentModel.FK_excute_cr" ManuallyRouted="false" />
+        <AssociationConnector Association="AbsentModel.FK_ins_cr" ManuallyRouted="false" />
+        <AssociationConnector Association="AbsentModel.FK_inst_cr" ManuallyRouted="false" />
+        <AssociationConnector Association="AbsentModel.FK_sec_cr" ManuallyRouted="false" />
+        <AssociationConnector Association="AbsentModel.FK_st_cr" ManuallyRouted="false" />
+        <AssociationConnector Association="AbsentModel.FK_st_cr" ManuallyRouted="false" />
+        <AssociationConnector Association="AbsentModel.FK_excute_ins" ManuallyRouted="false" />
+        <AssociationConnector Association="AbsentModel.FK_excute_sec" ManuallyRouted="false" />
+        <AssociationConnector Association="AbsentModel.FK_excute_st" ManuallyRouted="false" />
+        <AssociationConnector Association="AbsentModel.FK_ins_st" ManuallyRouted="false" />
+        <AssociationConnector Association="AbsentModel.FK_st_sec" ManuallyRouted="false" />
+        <AssociationConnector Association="AbsentModel.FK_std_st" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

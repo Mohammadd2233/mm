@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AbsentModelStoreContainer" CdmEntityContainer="AbsentEntities">
+    <EntitySetMapping Name="admin">
+      <EntityTypeMapping TypeName="AbsentModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="course_schedu">
+      <EntityTypeMapping TypeName="AbsentModel.course_schedu">
+        <MappingFragment StoreEntitySet="course_schedu">
+          <ScalarProperty Name="cr_Id" ColumnName="cr_Id" />
+          <ScalarProperty Name="cr_name" ColumnName="cr_name" />
+          <ScalarProperty Name="credit_hr" ColumnName="credit_hr" />
+          <ScalarProperty Name="section" ColumnName="section" />
+          <ScalarProperty Name="cr_symp" ColumnName="cr_symp" />
+          <ScalarProperty Name="stack" ColumnName="stack" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="excute">
+      <EntityTypeMapping TypeName="AbsentModel.excute">
+        <MappingFragment StoreEntitySet="excute">
+          <ScalarProperty Name="ex_Id" ColumnName="ex_Id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="ex_type" ColumnName="ex_type" />
+          <ScalarProperty Name="descrp" ColumnName="descrp" />
+          <ScalarProperty Name="doc" ColumnName="doc" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="cr_id" ColumnName="cr_id" />
+          <ScalarProperty Name="inst_id" ColumnName="inst_id" />
+          <ScalarProperty Name="st_id" ColumnName="st_id" />
+          <ScalarProperty Name="sec_id" ColumnName="sec_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ins_cr">
+      <EntityTypeMapping TypeName="AbsentModel.ins_cr">
+        <MappingFragment StoreEntitySet="ins_cr">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="cr_id" ColumnName="cr_id" />
+          <ScalarProperty Name="inst_id" ColumnName="inst_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="instructor">
+      <EntityTypeMapping TypeName="AbsentModel.instructor">
+        <MappingFragment StoreEntitySet="instructor">
+          <ScalarProperty Name="Inst_Id" ColumnName="Inst_Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="major" ColumnName="major" />
+          <ScalarProperty Name="cr_id" ColumnName="cr_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="section">
+      <EntityTypeMapping TypeName="AbsentModel.section">
+        <MappingFragment StoreEntitySet="section">
+          <ScalarProperty Name="sec_Id" ColumnName="sec_Id" />
+          <ScalarProperty Name="sec_name" ColumnName="sec_name" />
+          <ScalarProperty Name="st_stack" ColumnName="st_stack" />
+          <ScalarProperty Name="cr_id" ColumnName="cr_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="st_cr">
+      <EntityTypeMapping TypeName="AbsentModel.st_cr">
+        <MappingFragment StoreEntitySet="st_cr">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="cr_id" ColumnName="cr_id" />
+          <ScalarProperty Name="st_id" ColumnName="st_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student">
+      <EntityTypeMapping TypeName="AbsentModel.student">
+        <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="st_Id" ColumnName="st_Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="major" ColumnName="major" />
+          <ScalarProperty Name="cr_id" ColumnName="cr_id" />
+          <ScalarProperty Name="sec_id" ColumnName="sec_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="AbsentModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_type" ColumnName="user_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

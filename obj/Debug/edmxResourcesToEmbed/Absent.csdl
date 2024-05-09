@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AbsentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="course_schedu">
+    <Key>
+      <PropertyRef Name="cr_Id" />
+    </Key>
+    <Property Name="cr_Id" Type="Int32" Nullable="false" />
+    <Property Name="cr_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="credit_hr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="section" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cr_symp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stack" Type="Int32" />
+    <NavigationProperty Name="excute" Relationship="Self.FK_excute_cr" FromRole="course_schedu" ToRole="excute" />
+    <NavigationProperty Name="ins_cr" Relationship="Self.FK_ins_cr" FromRole="course_schedu" ToRole="ins_cr" />
+    <NavigationProperty Name="instructor" Relationship="Self.FK_inst_cr" FromRole="course_schedu" ToRole="instructor" />
+    <NavigationProperty Name="section1" Relationship="Self.FK_sec_cr" FromRole="course_schedu" ToRole="section" />
+    <NavigationProperty Name="student" Relationship="Self.FK_st_cr" FromRole="course_schedu" ToRole="student" />
+    <NavigationProperty Name="st_cr" Relationship="Self.FK_st_cr" FromRole="course_schedu" ToRole="st_cr" />
+  </EntityType>
+  <EntityType Name="excute">
+    <Key>
+      <PropertyRef Name="ex_Id" />
+    </Key>
+    <Property Name="ex_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="ex_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="descrp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="doc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cr_id" Type="Int32" />
+    <Property Name="inst_id" Type="Int32" />
+    <Property Name="st_id" Type="Int32" />
+    <Property Name="sec_id" Type="Int32" />
+    <NavigationProperty Name="course_schedu" Relationship="Self.FK_excute_cr" FromRole="excute" ToRole="course_schedu" />
+    <NavigationProperty Name="instructor" Relationship="Self.FK_excute_ins" FromRole="excute" ToRole="instructor" />
+    <NavigationProperty Name="section" Relationship="Self.FK_excute_sec" FromRole="excute" ToRole="section" />
+    <NavigationProperty Name="student" Relationship="Self.FK_excute_st" FromRole="excute" ToRole="student" />
+  </EntityType>
+  <EntityType Name="ins_cr">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cr_id" Type="Int32" />
+    <Property Name="inst_id" Type="Int32" />
+    <NavigationProperty Name="course_schedu" Relationship="Self.FK_ins_cr" FromRole="ins_cr" ToRole="course_schedu" />
+    <NavigationProperty Name="instructor" Relationship="Self.FK_ins_st" FromRole="ins_cr" ToRole="instructor" />
+  </EntityType>
+  <EntityType Name="instructor">
+    <Key>
+      <PropertyRef Name="Inst_Id" />
+    </Key>
+    <Property Name="Inst_Id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="major" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cr_id" Type="Int32" />
+    <NavigationProperty Name="course_schedu" Relationship="Self.FK_inst_cr" FromRole="instructor" ToRole="course_schedu" />
+    <NavigationProperty Name="excute" Relationship="Self.FK_excute_ins" FromRole="instructor" ToRole="excute" />
+    <NavigationProperty Name="ins_cr" Relationship="Self.FK_ins_st" FromRole="instructor" ToRole="ins_cr" />
+  </EntityType>
+  <EntityType Name="section">
+    <Key>
+      <PropertyRef Name="sec_Id" />
+    </Key>
+    <Property Name="sec_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sec_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="st_stack" Type="Int32" />
+    <Property Name="cr_id" Type="Int32" />
+    <NavigationProperty Name="course_schedu" Relationship="Self.FK_sec_cr" FromRole="section" ToRole="course_schedu" />
+    <NavigationProperty Name="excute" Relationship="Self.FK_excute_sec" FromRole="section" ToRole="excute" />
+    <NavigationProperty Name="student" Relationship="Self.FK_st_sec" FromRole="section" ToRole="student" />
+  </EntityType>
+  <EntityType Name="st_cr">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cr_id" Type="Int32" />
+    <Property Name="st_id" Type="Int32" />
+    <NavigationProperty Name="course_schedu" Relationship="Self.FK_st_cr" FromRole="st_cr" ToRole="course_schedu" />
+    <NavigationProperty Name="student" Relationship="Self.FK_std_st" FromRole="st_cr" ToRole="student" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="st_Id" />
+    </Key>
+    <Property Name="st_Id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="major" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cr_id" Type="Int32" />
+    <Property Name="sec_id" Type="Int32" />
+    <NavigationProperty Name="course_schedu" Relationship="Self.FK_st_cr" FromRole="student" ToRole="course_schedu" />
+    <NavigationProperty Name="excute" Relationship="Self.FK_excute_st" FromRole="student" ToRole="excute" />
+    <NavigationProperty Name="section" Relationship="Self.FK_st_sec" FromRole="student" ToRole="section" />
+    <NavigationProperty Name="st_cr" Relationship="Self.FK_std_st" FromRole="student" ToRole="st_cr" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="user_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_excute_cr">
+    <End Role="course_schedu" Type="Self.course_schedu" Multiplicity="0..1" />
+    <End Role="excute" Type="Self.excute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course_schedu">
+        <PropertyRef Name="cr_Id" />
+      </Principal>
+      <Dependent Role="excute">
+        <PropertyRef Name="cr_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ins_cr">
+    <End Role="course_schedu" Type="Self.course_schedu" Multiplicity="0..1" />
+    <End Role="ins_cr" Type="Self.ins_cr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course_schedu">
+        <PropertyRef Name="cr_Id" />
+      </Principal>
+      <Dependent Role="ins_cr">
+        <PropertyRef Name="cr_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_inst_cr">
+    <End Role="course_schedu" Type="Self.course_schedu" Multiplicity="0..1" />
+    <End Role="instructor" Type="Self.instructor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course_schedu">
+        <PropertyRef Name="cr_Id" />
+      </Principal>
+      <Dependent Role="instructor">
+        <PropertyRef Name="cr_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sec_cr">
+    <End Role="course_schedu" Type="Self.course_schedu" Multiplicity="0..1" />
+    <End Role="section" Type="Self.section" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course_schedu">
+        <PropertyRef Name="cr_Id" />
+      </Principal>
+      <Dependent Role="section">
+        <PropertyRef Name="cr_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_st_cr">
+    <End Role="course_schedu" Type="Self.course_schedu" Multiplicity="0..1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course_schedu">
+        <PropertyRef Name="cr_Id" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="cr_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_st_cr">
+    <End Role="course_schedu" Type="Self.course_schedu" Multiplicity="0..1" />
+    <End Role="st_cr" Type="Self.st_cr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course_schedu">
+        <PropertyRef Name="cr_Id" />
+      </Principal>
+      <Dependent Role="st_cr">
+        <PropertyRef Name="cr_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_excute_ins">
+    <End Role="instructor" Type="Self.instructor" Multiplicity="0..1" />
+    <End Role="excute" Type="Self.excute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="instructor">
+        <PropertyRef Name="Inst_Id" />
+      </Principal>
+      <Dependent Role="excute">
+        <PropertyRef Name="inst_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_excute_sec">
+    <End Role="section" Type="Self.section" Multiplicity="0..1" />
+    <End Role="excute" Type="Self.excute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="section">
+        <PropertyRef Name="sec_Id" />
+      </Principal>
+      <Dependent Role="excute">
+        <PropertyRef Name="sec_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_excute_st">
+    <End Role="student" Type="Self.student" Multiplicity="0..1" />
+    <End Role="excute" Type="Self.excute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="st_Id" />
+      </Principal>
+      <Dependent Role="excute">
+        <PropertyRef Name="st_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ins_st">
+    <End Role="instructor" Type="Self.instructor" Multiplicity="0..1" />
+    <End Role="ins_cr" Type="Self.ins_cr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="instructor">
+        <PropertyRef Name="Inst_Id" />
+      </Principal>
+      <Dependent Role="ins_cr">
+        <PropertyRef Name="inst_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_st_sec">
+    <End Role="section" Type="Self.section" Multiplicity="0..1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="section">
+        <PropertyRef Name="sec_Id" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="sec_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_std_st">
+    <End Role="student" Type="Self.student" Multiplicity="0..1" />
+    <End Role="st_cr" Type="Self.st_cr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="st_Id" />
+      </Principal>
+      <Dependent Role="st_cr">
+        <PropertyRef Name="st_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AbsentEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admin" EntityType="Self.admin" />
+    <EntitySet Name="course_schedu" EntityType="Self.course_schedu" />
+    <EntitySet Name="excute" EntityType="Self.excute" />
+    <EntitySet Name="ins_cr" EntityType="Self.ins_cr" />
+    <EntitySet Name="instructor" EntityType="Self.instructor" />
+    <EntitySet Name="section" EntityType="Self.section" />
+    <EntitySet Name="st_cr" EntityType="Self.st_cr" />
+    <EntitySet Name="student" EntityType="Self.student" />
+    <EntitySet Name="user" EntityType="Self.user" />
+    <AssociationSet Name="FK_excute_cr" Association="Self.FK_excute_cr">
+      <End Role="course_schedu" EntitySet="course_schedu" />
+      <End Role="excute" EntitySet="excute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ins_cr" Association="Self.FK_ins_cr">
+      <End Role="course_schedu" EntitySet="course_schedu" />
+      <End Role="ins_cr" EntitySet="ins_cr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_inst_cr" Association="Self.FK_inst_cr">
+      <End Role="course_schedu" EntitySet="course_schedu" />
+      <End Role="instructor" EntitySet="instructor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sec_cr" Association="Self.FK_sec_cr">
+      <End Role="course_schedu" EntitySet="course_schedu" />
+      <End Role="section" EntitySet="section" />
+    </AssociationSet>
+    <AssociationSet Name="FK_st_cr" Association="Self.FK_st_cr">
+      <End Role="course_schedu" EntitySet="course_schedu" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_st_cr" Association="Self.FK_st_cr">
+      <End Role="course_schedu" EntitySet="course_schedu" />
+      <End Role="st_cr" EntitySet="st_cr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_excute_ins" Association="Self.FK_excute_ins">
+      <End Role="instructor" EntitySet="instructor" />
+      <End Role="excute" EntitySet="excute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_excute_sec" Association="Self.FK_excute_sec">
+      <End Role="section" EntitySet="section" />
+      <End Role="excute" EntitySet="excute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_excute_st" Association="Self.FK_excute_st">
+      <End Role="student" EntitySet="student" />
+      <End Role="excute" EntitySet="excute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ins_st" Association="Self.FK_ins_st">
+      <End Role="instructor" EntitySet="instructor" />
+      <End Role="ins_cr" EntitySet="ins_cr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_st_sec" Association="Self.FK_st_sec">
+      <End Role="section" EntitySet="section" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_std_st" Association="Self.FK_std_st">
+      <End Role="student" EntitySet="student" />
+      <End Role="st_cr" EntitySet="st_cr" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

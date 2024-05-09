@@ -1,0 +1,63 @@
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\csc.exe
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\Absent MG.dll.config
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\Absent MG.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\Absent MG.pdb
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\csc.exe.config
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\csc.rsp
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\csi.exe
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\csi.exe.config
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\csi.rsp
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.AppContext.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Console.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.IO.Compression.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Net.Http.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Net.Sockets.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.ValueTuple.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Xml.XPath.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\vbc.exe
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\vbc.exe.config
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\vbc.rsp
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\VBCSCompiler.exe
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\soso_\source\repos\Absent MG\Absent MG\obj\Debug\Absent MG.csproj.AssemblyReference.cache
+C:\Users\soso_\source\repos\Absent MG\Absent MG\obj\Debug\Absent MG.csproj.CoreCompileInputs.cache
+C:\Users\soso_\source\repos\Absent MG\Absent MG\obj\Debug\Absent MG.csproj.CopyComplete
+C:\Users\soso_\source\repos\Absent MG\Absent MG\obj\Debug\Absent MG.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\obj\Debug\Absent MG.pdb
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\EntityFramework.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\EntityFramework.SqlServer.dll
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\EntityFramework.xml
+C:\Users\soso_\source\repos\Absent MG\Absent MG\bin\EntityFramework.SqlServer.xml

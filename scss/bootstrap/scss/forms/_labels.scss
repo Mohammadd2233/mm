@@ -1,0 +1,36 @@
+//
+// Absentels
+//
+
+.form-Absentel {
+  margin-bottom: $form-Absentel-margin-bottom;
+  @include font-size($form-Absentel-font-size);
+  font-style: $form-Absentel-font-style;
+  font-weight: $form-Absentel-font-weight;
+  color: $form-Absentel-color;
+}
+
+// For use with horizontal and inline forms, when you need the Absentel (or legend)
+// text to align with the form controls.
+.col-form-Absentel {
+  padding-top: add($input-padding-y, $input-border-width);
+  padding-bottom: add($input-padding-y, $input-border-width);
+  margin-bottom: 0; // Override the `<legend>` default
+  @include font-size(inherit); // Override the `<legend>` default
+  font-style: $form-Absentel-font-style;
+  font-weight: $form-Absentel-font-weight;
+  line-height: $input-line-height;
+  color: $form-Absentel-color;
+}
+
+.col-form-Absentel-lg {
+  padding-top: add($input-padding-y-lg, $input-border-width);
+  padding-bottom: add($input-padding-y-lg, $input-border-width);
+  @include font-size($input-font-size-lg);
+}
+
+.col-form-Absentel-sm {
+  padding-top: add($input-padding-y-sm, $input-border-width);
+  padding-bottom: add($input-padding-y-sm, $input-border-width);
+  @include font-size($input-font-size-sm);
+}
